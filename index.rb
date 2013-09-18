@@ -5,7 +5,7 @@ get '/' do
 	erb :index
 end
 
-get '/За_батьку_нашего_Путина!!!' do
+get '/Za_batky_nashego_putina' do
 	erb :index
 	@msg = 'ЗА БАТЬКУ ПУТИНА!!!'
 end 
