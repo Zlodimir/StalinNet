@@ -1,6 +1,7 @@
-require rubygems
-require sinatra
+require 'rubygems'
+require 'sinatra'
 
 get '/' do
 	erb :index
 end
+
