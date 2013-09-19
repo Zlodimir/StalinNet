@@ -6,5 +6,5 @@ get '/' do
 end
 
 get '/Za_batky_nashego_putina' do
-
+	erb :index
 end 
