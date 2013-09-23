@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Starting..."
+echo "Getting last changes form Git..."
+sudo git pull 
+echo "Stopping Stalin.net"
+sudo /etc/init.d/unicorn_com.stalin stop 
+echo "Starting Stalin.net"
+sudo /etc/init.d/unicorn_com.stalin start
+echo "Done"
