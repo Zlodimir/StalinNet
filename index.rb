@@ -1,3 +1,5 @@
+# coding: utf-8
+
 require 'rubygems'
 require 'sinatra'
 
@@ -6,8 +8,8 @@ get '/' do
 end
 
 get '/Za_batky_nashego_putina!' do
-	@msg = 'Za batky nashego Putina!'
-	#@mas = 'За батьку нашего Путина!'
+	#@msg = 'Za batky nashego Putina!'
+	@mas = 'За батьку нашего Путина!'
 	erb :index
 end 
 
