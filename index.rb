@@ -6,7 +6,8 @@ get '/' do
 end
 
 get '/Za_batky_nashego_putina!' do
-	@msg = 'Za_batky_nashego_putina!'
+	#@msg = 'Za_batky_nashego_Putina!'
+	@mas = 'За батьку нашего Путина!'
 	erb :index
 end 
 
