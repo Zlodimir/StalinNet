@@ -9,7 +9,7 @@ end
 
 get '/Za_batky_nashego_putina!' do
 	#@msg = 'Za batky nashego Putina!'
-	@mas = 'За батьку нашего Путина!'
+	@msg = 'За батьку нашего Путина!'
 	erb :index
 end 
 
