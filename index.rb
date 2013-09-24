@@ -12,7 +12,7 @@ get '/За_батьку_нашего_Путина!' do
 	erb :index
 end 
 
-get '/Za_batky_nashego_Stalina!' do
+get '/За_батьку_нашего_Сталина!' do
 	@msg = 'За батьку нашего Сталина!'
 	erb :index
 end
