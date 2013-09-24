@@ -2,6 +2,13 @@
 
 require 'rubygems'
 require 'sinatra'
+require 'postgres'
+
+def connect(db, user, pw)
+  PGconn.new('localhost', 5432, '', '', db, user, pw) 
+end
+
+conn = connect('net_stalin','net_stalin','123net456stalin')
 
 get '/' do
 	erb :index
