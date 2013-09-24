@@ -2,7 +2,7 @@
 
 require 'rubygems'
 require 'sinatra'
-require 'postgres'
+require 'pg'
 
 def connect(db, user, pw)
   PGconn.new('localhost', 5432, '', '', db, user, pw) 
