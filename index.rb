@@ -3,6 +3,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'data_mapper'
+require 'dm-postgres-adapter'
 
 
 # If you want the logs displayed you have to do this before the call to setup
