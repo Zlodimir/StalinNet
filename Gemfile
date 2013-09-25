@@ -7,6 +7,7 @@ gem 'rdiscount'
 gem 'ruby-stemmer'
 gem 'unicorn'
 gem 'instagram'
+gem 'datamapper'
 
 group :development do
 	gem 'capistrano'
