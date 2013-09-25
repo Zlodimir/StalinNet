@@ -24,7 +24,7 @@ end
 
 DataMapper.finalize
 
-@ip = request.env['REMOTE_ADDR'].split(',').first
+#@ip = request.env['REMOTE_ADDR'].split(',').first
 
 get '/' do
 	erb :index
