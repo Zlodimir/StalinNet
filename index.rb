@@ -19,7 +19,7 @@ class Vote
   property :ip,       	String    # Ip Address
   property :host, 		String    # Host name
   property :browser,	String	  # Browser
-  property :vote,		integer   # 1 - Stalin, 2 - Putin
+  property :vote,		Integer   # 1 - Stalin, 2 - Putin
 end
 
 DataMapper.finalize
