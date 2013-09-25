@@ -1,12 +1,12 @@
 source 'http://rubygems.org'
 
 gem 'sinatra'
-gem 'haml'
-gem 'grit'
-gem 'rdiscount'
-gem 'ruby-stemmer'
+#gem 'haml'
+#gem 'grit'
+#gem 'rdiscount'
+#gem 'ruby-stemmer'
 gem 'unicorn'
-gem 'instagram'
+#gem 'instagram'
 gem 'data_mapper'
 #gem 'dm-postgres-adapter'
 
