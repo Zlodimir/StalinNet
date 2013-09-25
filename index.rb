@@ -18,7 +18,7 @@ class Vote
   property :init_date,  DateTime  # init time
   property :ip,       	String    # Ip Address
   property :host, 		String    # Host name
-  property :browser		String	  # Browser
+  property :browser,	String	  # Browser
 end
 
 DataMapper.finalize
