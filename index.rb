@@ -31,6 +31,9 @@ DataMapper.finalize
 @stalin_votes = Vote.all(:vote => 1).count  
 @putin_votes = Vote.all(:vote => 2).count
 
+puts @stalin_votes.inspect
+puts @putin_votes.inspect
+
 get '/' do
 	erb :index
 end
@@ -38,7 +41,6 @@ end
 get '/За_батьку_нашего_Путина!' do
 	vote = Vote.new
 	vote.attributes = {:init_date => Time.now, :ip => '222.333.444.555', :vote => 2}
-	#vote = Vote.create(:init_date => Time.now, :ip => '222.333.444.555', :vote => 2)
 	vote.save
 	@msg = 'За батьку нашего Путина!'
 	erb :index
@@ -46,7 +48,6 @@ end
 
 get '/За_батьку_нашего_Сталина!' do
 	vote = Vote.new
-	#vote = Vote.create(:init_date => Time.now, :ip => '222.333.444.555', :vote => 1)
 	vote.attributes = {:init_date => Time.now, :ip => '222.333.444.555', :vote => 1}
 	vote.save
 	@msg = 'За батьку нашего Сталина!'
