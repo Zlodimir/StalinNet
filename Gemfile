@@ -7,7 +7,7 @@ gem 'rdiscount'
 gem 'ruby-stemmer'
 gem 'unicorn'
 gem 'instagram'
-gem 'datamapper'
+gem 'data_mapper'
 gem 'dm-postgres-adapter'
 
 group :development do
