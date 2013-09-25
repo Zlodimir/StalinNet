@@ -2,7 +2,7 @@
 
 require 'rubygems'
 require 'sinatra'
-#require 'data_mapper'
+require 'data_mapper'
 
 =begin
 # A Postgres connection:
