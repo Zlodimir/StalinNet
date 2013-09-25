@@ -4,10 +4,10 @@ require 'rubygems'
 require 'sinatra'
 #require 'data_mapper'
 
-
+/
 # A Postgres connection:
 DataMapper.setup(:default, 'postgres://net_stalin:123net456stalin@localhost/net_stalin')
-
+/
 get '/' do
 	erb :index
 end
