@@ -10,6 +10,7 @@ gem 'unicorn'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 #gem 'dm-postgres-adapter'
+gem 'socket'
 
 group :development do
 	gem 'capistrano'

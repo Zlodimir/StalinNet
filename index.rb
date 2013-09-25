@@ -4,6 +4,7 @@ require 'rubygems'
 require 'sinatra'
 require 'data_mapper'
 require 'dm-postgres-adapter'
+require 'socket'
 
 
 # If you want the logs displayed you have to do this before the call to setup
@@ -19,9 +20,12 @@ class Vote
   property :ip,       	String    # Ip Address
   property :host, 		String    # Host name
   property :browser,	String	  # Browser
+  property :vote,		integer   # 1 - Stalin, 2 - Putin
 end
 
 DataMapper.finalize
+
+ip = IPSocket.getaddress(Socket.gethostname)
 
 
 get '/' do
@@ -29,11 +33,15 @@ get '/' do
 end
 
 get '/За_батьку_нашего_Путина!' do
+	vote = Vote.create(:init_date => Time.now, :ip => ip, :vote => 2)
+	vote.save!
 	@msg = 'За батьку нашего Путина!'
 	erb :index
 end 
 
 get '/За_батьку_нашего_Сталина!' do
+	vote = Vote.create(:init_date => Time.now, :ip => ip, :vote => 1)
+	vote.save!
 	@msg = 'За батьку нашего Сталина!'
 	erb :index
 end
