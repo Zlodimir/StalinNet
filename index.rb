@@ -31,15 +31,15 @@ get '/' do
 end
 
 get '/За_батьку_нашего_Путина!' do
-	vote = Vote.create(:init_date => Time.now, :ip => ip, :vote => 2)
-	vote.save!
+	vote = Vote.create(:init_date => Time.now, :ip => '222.333.444.555', :vote => 2)
+	vote.save
 	@msg = 'За батьку нашего Путина!'
 	erb :index
 end 
 
 get '/За_батьку_нашего_Сталина!' do
-	vote = Vote.create(:init_date => Time.now, :ip => ip, :vote => 1)
-	vote.save!
+	vote = Vote.create(:init_date => Time.now, :ip => '222.333.444.555', :vote => 1)
+	vote.save
 	@msg = 'За батьку нашего Сталина!'
 	erb :index
 end
