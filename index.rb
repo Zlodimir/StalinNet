@@ -7,7 +7,7 @@ require 'dm-postgres-adapter'
 
 
 # If you want the logs displayed you have to do this before the call to setup
-#DataMapper::Logger.new($stdout, :debug)
+DataMapper::Logger.new($stdout, :debug)
 # A Postgres connection:
 DataMapper.setup(:default, 'postgres://net_stalin:123net456stalin@localhost/net_stalin')
 
