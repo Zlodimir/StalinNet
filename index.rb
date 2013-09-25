@@ -4,10 +4,12 @@ require 'rubygems'
 require 'sinatra'
 require 'data_mapper'
 
-=begin
+
+# If you want the logs displayed you have to do this before the call to setup
+DataMapper::Logger.new($stdout, :debug)
 # A Postgres connection:
 DataMapper.setup(:default, 'postgres://net_stalin:123net456stalin@localhost/net_stalin')
-=end
+
 get '/' do
 	erb :index
 end
