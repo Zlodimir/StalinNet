@@ -42,7 +42,9 @@ get '/За_батьку_нашего_Путина!' do
 end 
 
 get '/За_батьку_нашего_Сталина!' do
-	vote = Vote.create(:init_date => Time.now, :ip => '222.333.444.555', :vote => 1)
+	vote = Vote.new
+	#vote = Vote.create(:init_date => Time.now, :ip => '222.333.444.555', :vote => 1)
+	vote.attributes = {:init_date => Time.now, :ip => '222.333.444.555', :vote => 1}
 	vote.save
 	@msg = 'За батьку нашего Сталина!'
 	erb :index
