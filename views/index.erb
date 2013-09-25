@@ -38,18 +38,22 @@
 		<p>
 		<p>
 		<div class="container" style="background-color: d1d1d1; border: solid 3px silver;">
-			<div class="span-3">
-				<h3 style='text-align: center; font-size: 30px;'><%= @putin_votes %>&nbsp;</h3>
-			</div>
-			<div class="span-18">
+			<div class="span-24">
 				<h1 style="font-size: 45px; text-align: center; color: 414141">STALIN VERSUS PUTIN</h1>
 				<br><br>
 					<h3 style='text-align: center; font-size: 30px;'><%= @msg %>&nbsp;</h3>
 				<br><br>
 			</div>
+
+			<div class="span-3">
+				<h3 style='text-align: center; font-size: 30px;'><%= @putin_votes.to_s %>&nbsp;</h3>
+			</div>		
+			<div class="span-18">
+				&nbsp;
+			</div>					
 			<div class="span-3 last">
-				<h3 style='text-align: center; font-size: 30px;'><%= @stalin_votes %>&nbsp;</h3>
-			</div>			
+				<h3 style='text-align: center; font-size: 30px;'><%= @stalin_votes.to_s %>&nbsp;</h3>
+			</div>
 
 			<div class="span-9">
 				<img src="img/putin.jpg">
