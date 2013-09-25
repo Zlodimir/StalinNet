@@ -4,7 +4,6 @@ require 'rubygems'
 require 'sinatra'
 require 'data_mapper'
 require 'dm-postgres-adapter'
-require 'socket'
 
 
 # If you want the logs displayed you have to do this before the call to setup
@@ -25,8 +24,7 @@ end
 
 DataMapper.finalize
 
-ip = IPSocket.getaddress(Socket.gethostname)
-
+@ip = request.env['REMOTE_ADDR'].split(',').first
 
 get '/' do
 	erb :index
