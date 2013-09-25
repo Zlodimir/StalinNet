@@ -22,7 +22,8 @@ class Vote
   property :browser,	String	  # Browser
   property :vote,		Integer   # 1 - Stalin, 2 - Putin
 end
-
+# Automatically create the tables if they don't exist
+DataMapper.auto_migrate!
 DataMapper.finalize
 
 #@ip = request.env['REMOTE_ADDR'].split(',').first
