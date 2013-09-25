@@ -8,7 +8,7 @@ gem 'ruby-stemmer'
 gem 'unicorn'
 gem 'instagram'
 gem 'data_mapper'
-gem 'dm-postgres-adapter'
+#gem 'dm-postgres-adapter'
 
 group :development do
 	gem 'capistrano'
