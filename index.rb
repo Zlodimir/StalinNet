@@ -40,6 +40,11 @@ after do
 	@putin_votes = Vote.all(:vote => 2).count
 end
 
+before do
+  	@stalin_votes = Vote.all(:vote => 1).count  
+	@putin_votes = Vote.all(:vote => 2).count
+end
+
 get '/' do
 	erb :index
 end
