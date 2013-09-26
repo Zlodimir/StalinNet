@@ -33,6 +33,7 @@ DataMapper.finalize
 
 puts @stalin_votes
 puts @putin_votes
+@putin_votes = 123
 
 get '/' do
 	erb :index
