@@ -35,13 +35,12 @@ puts @putin_votes
 @putin_votes = 123
 =end
 
-before do
+after do
   	@stalin_votes = Vote.all(:vote => 1).count  
 	@putin_votes = Vote.all(:vote => 2).count
 end
 
 get '/' do
-	#@putin_votes = 123
 	erb :index
 end
 
