@@ -35,25 +35,28 @@ puts @putin_votes
 @putin_votes = 123
 =end
 
+=begin
 after do
   	@stalin_votes = Vote.all(:vote => 1).count  
 	@putin_votes = Vote.all(:vote => 2).count
 end
 
 before do
-  	@stalin_votes = Vote.all(:vote => 1).count  
-	@putin_votes = Vote.all(:vote => 2).count
-end
 
+end
+=end
 get '/' do
 	erb :index
 end
 
 get '/За_батьку_нашего_Путина!' do
+
 	vote = Vote.new
 	vote.attributes = {:init_date => Time.now, :ip => '222.333.444.555', :vote => 2}
 	vote.save
 	@msg = 'За батьку нашего Путина!'
+	@stalin_votes = Vote.all(:vote => 1).count  
+	@putin_votes = Vote.all(:vote => 2).count
 	erb :index
 end 
 
@@ -62,5 +65,7 @@ get '/За_батьку_нашего_Сталина!' do
 	vote.attributes = {:init_date => Time.now, :ip => '222.333.444.555', :vote => 1}
 	vote.save
 	@msg = 'За батьку нашего Сталина!'
+	@stalin_votes = Vote.all(:vote => 1).count  
+	@putin_votes = Vote.all(:vote => 2).count	
 	erb :index
 end
