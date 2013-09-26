@@ -28,23 +28,18 @@ DataMapper.finalize
 
 #@ip = request.env['REMOTE_ADDR'].split(',').first
 
-
-=begin
-puts @stalin_votes
-puts @putin_votes
-@putin_votes = 123
-=end
-
 =begin
 after do
   	@stalin_votes = Vote.all(:vote => 1).count  
 	@putin_votes = Vote.all(:vote => 2).count
 end
+=end
 
 before do
-
+  	@stalin_votes = Vote.all(:vote => 1).count  
+	@putin_votes = Vote.all(:vote => 2).count
 end
-=end
+
 get '/' do
 	erb :index
 end
