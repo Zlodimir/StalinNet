@@ -31,8 +31,8 @@ DataMapper.finalize
 @stalin_votes = Vote.all(:vote => 1).count  
 @putin_votes = Vote.all(:vote => 2).count
 
-puts @stalin_votes.inspect
-puts @putin_votes.inspect
+puts @stalin_votes
+puts @putin_votes
 
 get '/' do
 	erb :index
