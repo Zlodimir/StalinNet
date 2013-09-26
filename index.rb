@@ -28,12 +28,17 @@ DataMapper.finalize
 
 #@ip = request.env['REMOTE_ADDR'].split(',').first
 
-@stalin_votes = Vote.all(:vote => 1).count  
-@putin_votes = Vote.all(:vote => 2).count
 
+=begin
 puts @stalin_votes
 puts @putin_votes
 @putin_votes = 123
+=end
+
+before do
+  	@stalin_votes = Vote.all(:vote => 1).count  
+	@putin_votes = Vote.all(:vote => 2).count
+end
 
 get '/' do
 	#@putin_votes = 123
