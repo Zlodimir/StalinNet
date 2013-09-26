@@ -36,6 +36,7 @@ puts @putin_votes
 @putin_votes = 123
 
 get '/' do
+	@putin_votes = 123
 	erb :index
 end
 
