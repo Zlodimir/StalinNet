@@ -38,6 +38,8 @@ end
 before do
   	@stalin_votes = Vote.all(:vote => 1).count  
 	@putin_votes = Vote.all(:vote => 2).count
+	@ip = request.env['REMOTE_ADDR']
+	puts @ip
 end
 
 get '/' do
